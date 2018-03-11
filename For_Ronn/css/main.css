@@ -1,0 +1,472 @@
+*{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 16px;
+}
+
+body{
+	color: #fff;
+	font-size: 1em;
+	line-height: 1.1rem;
+	font-family: "Open Sans", sans-serif;
+	background-color: rgb(24, 40, 69);
+}
+
+header{
+	background-color: rgba(30, 56, 88, 1);
+	-webkit-box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.49);
+	        box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.49);
+}
+
+header,
+.container,
+.header-wrap,
+.content{
+	width: 100vw;
+	margin: 0 auto;
+}
+
+.header-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+					height: 4.25rem;
+}
+
+.logo{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 100%;
+	margin: 0 1.5rem;
+}
+
+.logo a{
+	font-size: 3.2em;
+	line-height: 1.05em;
+	text-decoration: none;
+	color: #fff;
+	letter-spacing: 1px;
+	border-bottom: solid 2px rgb(0, 163, 214);
+}
+
+.nav-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	height: 100%;
+}
+
+.nav-menu{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+	padding: 0;
+	height: 100%;
+	font-size: 2em;
+	line-height: 1.1em;
+}
+
+.nav-menu a{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 100%;
+	text-decoration: none;
+	color: rgb(148, 148, 148);
+	padding: 0 1.8rem;
+}
+
+.nav-menu a:hover{
+	color: #fff;
+	background-color: rgb(62, 96, 142);
+}
+
+.nav-menu .active{
+	background-color: rgb(62, 96, 142);
+	color: #fff;
+}
+
+.beta{
+	position: relative;
+}
+
+.beta span{
+	position: absolute;
+	bottom: -0.4rem;
+	right: 1.7rem;
+	font-size: 0.45em;
+	color: rgb(193, 121, 22);
+	text-transform: uppercase;
+}
+
+.hamburger{
+	width: 3.5rem;
+	height: 2.1rem;
+	position: relative;
+	margin-right: 1.3rem;
+	border-top: 2px solid rgb(148, 148, 148);
+	border-bottom: 2px solid rgb(148, 148, 148);
+}
+
+.hamburger::after{
+	content: '';
+	position: absolute;
+	top: 48.5%;
+	left: 0;
+	right: 0;
+	display: block;
+	height: 2px;
+	width: 100%;
+	background: rgb(148, 148, 148);
+}
+
+/*     COPY SECTION     */
+
+.copy-section{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	width: 100%;
+	min-height: 5.5rem;
+	color: #fff;
+}
+
+.copy-section a {
+	color: #fff;
+	text-decoration: none;
+	margin: 0 0 0.5rem 1.25rem;
+	font-size: 1.5em;
+	line-height: 1.1em;
+}
+
+.copy-section a p span:last-child{
+	text-transform: uppercase;
+}
+
+/*  TABS  */
+
+.tab-wrap{
+	width: 100%;
+	background-color: rgba(42, 80, 126, 1);
+}
+
+.tab-wrap > input,
+.drop-favorite > input,
+.content-favorite{
+	display: none;
+}
+
+.tab-wrap > input:checked + label{
+	background-color: rgb(179, 211, 231);
+	color: #000;
+}
+
+.tab-wrap > input[id="tab-1"]:checked ~ .content .tab-1,
+.tab-wrap > input[id="tab-2"]:checked ~ .content .tab-2{
+	display: block;
+}
+
+.drop-favorite label{
+	display: block;
+	cursor: pointer;
+}
+
+.drop-favorite > input[id="tab-favorite"]:checked ~ .content-favorite{
+	background-color: green;
+	position: absolute;
+	right: 4rem;
+	top: 2.1rem;
+	display: block;
+	height: auto;
+	width: auto;
+	z-index: 5;
+}
+
+.tab-label{
+	cursor: pointer;
+	display: inline-block;
+	padding: 1.2rem 1.5rem;
+	background-color: rgba(42, 80, 126, 1);
+	font-size: 1.5em;
+	line-height: 1.05em;
+	margin: 0 -0.21rem 0 0;
+}
+
+.content{
+	position: relative;
+}
+
+.tab-wrap .content > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	display: none;
+	color: #000;
+	height: auto;
+}
+
+/*  TAB-2 CONTENT inside  */
+/* FIRST FORM  -- search-area-field-wrap -- */
+
+.tab-2 .list-wrap .search-area-field-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 2.5rem;
+	padding: 0 0.8rem;
+}
+
+.btn-search{
+	display: inline-block;
+	margin: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: #fff;
+}
+
+.form-search span,
+.drop-favorite span,
+.list-wrap .question{
+	font-size: 1.5em;
+	line-height: 1.1em;
+	vertical-align: middle;
+	color: #000;
+}
+
+.form-search{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 2;
+	    -ms-flex: 2;
+	        flex: 2;
+}
+
+.search{
+	width: 100%;
+	padding: 0 0.5rem;
+	margin: 0 0.6rem;
+	border: none;
+	outline: none;
+}
+
+.drop-favorite label{
+	position: relative;
+}
+
+.drop-favorite label::after{
+	content: '';
+	border-style: solid;
+	border-width: 5.5px 5.5px 0 5.5px;
+	border-color: #000 transparent transparent transparent;
+	position: absolute;
+	top: 50%;
+	left: 1.3rem;
+}
+
+.question{
+	margin: 0 1rem 0 1.3rem;
+}
+
+/*  SECOND FORM  -- setting-form-wrap -- */
+
+.setting-form-wrap{
+	width: 100%;
+	height: auto;
+	background-color: rgb(219, 219, 219);
+}
+
+.setting-form{
+	padding: 1.5rem;
+	height: 75vh;
+}
+
+.setting-form select,
+.setting-form label,
+.setting-form input[type="reset"],
+.setting-form input[type="button"]{
+	cursor: pointer;
+}
+
+.setting-form .action-area-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.setting-form .action-area-wrap p{
+	width: 100%;
+	text-align: center;
+}
+
+.setting-form .action-area-wrap .action-select-wrap select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 9.5rem;
+	height: 2.5rem;
+	border-radius: 6px;
+	margin: 0;
+	padding: 0 0 0 1rem;
+	background-color: rgb(35, 69, 111);
+	color: #fff;
+	font-size: 1.3em;
+}
+
+.setting-form .action-area-wrap .action-select-wrap {
+	position: relative;
+}
+
+.setting-form .action-area-wrap .action-select-wrap::after{
+	content: '';
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #fff transparent transparent transparent;
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+}
+
+.setting-form .action-area-wrap .action-select-wrap select option{
+	background-color: #fff;
+	color: #000;
+}
+
+.form-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 1rem 5rem 0 5rem;
+}
+
+.form-label-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+}
+
+.form-label-wrap > label{
+	margin-right: 0.2rem;
+	margin-bottom: 1.3rem;
+	padding: 0.2rem;
+}
+
+.form-item-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	width: 70%;
+}
+
+.form-item-wrap > input,
+.form-item-wrap textarea{
+	margin-bottom: 1rem;
+	padding: 0.2rem;
+}
+
+.form-item-wrap textarea{
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 3.5rem;
+}
+
+.form-select-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 70%;
+	margin: 0 5rem 1rem;
+	padding-left: 1.8rem;
+}
+
+.form-select-wrap > label{
+	padding: 0.2rem;
+	margin-right: 0.2rem;
+}
+
+.form-select-wrap select{
+	width: 8rem;
+	height: 2.5rem;
+	padding: 0.1rem 0.3rem;
+}
+
+.form-button-wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.form-button-wrap input{
+	padding: 0.4rem 1.2rem;
+	margin-left: 0.8rem;
+	border-radius: 6px;
+	background-color: rgb(13, 152, 35);
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 1.3em;
+	line-height: 1.1em;
+}
+
+.form-button-wrap input:first-child{
+	color: #545454;
+	background-color: transparent;
+}
