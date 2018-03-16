@@ -27,7 +27,10 @@ header{
 header,
 .container,
 .header-wrap,
-.content{
+.copy-section,
+.tab-wrap,
+.content,
+.tab-wrap .content > div{
 	width: 100%;
 	margin: 0 auto;
 }
@@ -46,6 +49,13 @@ header,
 					height: 6.25rem;
 }
 
+.logo,
+.nav-wrap,
+.nav-wrap .nav-menu,
+.nav-wrap .nav-menu a{
+	height: 100%;
+}
+
 .logo{
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -53,7 +63,6 @@ header,
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	height: 100%;
 	margin: 0 1.5rem;
 }
 
@@ -78,7 +87,6 @@ header,
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	height: 100%;
 }
 
 .nav-menu{
@@ -87,7 +95,6 @@ header,
 	display: flex;
 	list-style: none;
 	padding: 0;
-	height: 100%;
 	font-size: 2em;
 	line-height: 1.1em;
 }
@@ -99,7 +106,6 @@ header,
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	height: 100%;
 	text-decoration: none;
 	color: rgb(191, 191, 191);
 	padding: 0 3.87rem;
@@ -154,7 +160,6 @@ header,
 	-webkit-box-align: end;
 	    -ms-flex-align: end;
 	        align-items: flex-end;
-	width: 100%;
 	height: 8.12rem;
 	color: #fff;
 }
@@ -175,7 +180,6 @@ header,
 
 .tab-wrap{
 	height: 6.25rem;
-	width: 100%;
 	background-color: rgb(47, 96, 151);
 }
 
@@ -215,11 +219,11 @@ header,
 .drop-favorite > input[id="tab-favorite"]:checked ~ .content-favorite{
 	background-color: green;
 	position: absolute;
-	right: 3.5rem;
-	top: 2.9rem;
+	right: 3.3rem;
+	top: 3.1rem;
 	display: block;
-	height: auto;
-	width: auto;
+	height: 10rem;
+	width: 8rem;
 	z-index: 5;
 }
 
@@ -231,8 +235,6 @@ header,
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	margin: 0 auto;
 	background-color: #fff;
 	display: none;
 	color: #000;
@@ -290,7 +292,7 @@ header,
 	        flex: 2;
 }
 
-.form-search .search{
+.form-search .input-search{
 	width: 100%;
 	padding: 0 0.5rem;
 	margin: 0 0.6rem;
@@ -319,7 +321,8 @@ header,
 
 /*  SECOND FORM  -- setting-form-wrap -- */
 
-.setting-form-wrap{
+.setting-form-wrap,
+.setting-form{
 	width: 100%;
 }
 
