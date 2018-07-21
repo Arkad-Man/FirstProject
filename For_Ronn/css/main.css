@@ -14,23 +14,20 @@ body{
 	font-size: 1em;
 	line-height: 1.1rem;
 	font-family: "Open Sans", sans-serif;
-	background-color: rgb(20, 63, 94);
-	font-weight: 300;
+	background-color: rgb(24, 40, 69);
 }
 
 header{
-	background-color: rgb(26, 78, 120);
-	-webkit-box-shadow: 0 3px 10px 5px rgba(13, 40, 61, .5);
-	        box-shadow: 0 3px 10px 5px rgba(13, 40, 61, .5);
+	background-color: rgba(30, 56, 88, 1);
+	-webkit-box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.49);
+	        box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.49);
 }
 
 header,
 .container,
 .header-wrap,
-.copy-section,
-.tab-wrap,
-.content,
-.tab-wrap .content > div{
+.content{
+	min-width: 1345px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -46,47 +43,52 @@ header,
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-					height: 6.25rem;
-}
-
-.logo,
-.nav-wrap,
-.nav-wrap .nav-menu,
-.nav-wrap .nav-menu a{
-	height: 100%;
+					height: 4.2rem;
 }
 
 .logo{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	margin: 0 1.5rem;
+	padding: 0 1.5rem;
 }
 
 .logo a{
-	font-size: 3em;
-	line-height: 1.05em;
-	text-decoration: none;
-	color: #fff;
-	border-bottom: solid 2px rgb(0, 163, 214);
-}
-
-.nav-wrap{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	text-decoration: none;
+}
+
+.logo a p{
+	color: #fff;
+	letter-spacing: 0.8px;
+}
+
+.logo a p:first-child{
+	line-height: 1.5em;
+	border-bottom: 1px solid #fff;
+}
+
+.logo a p:last-child{
+	text-transform: uppercase;
+}
+
+.nav-wrap{
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
 }
 
 .nav-menu{
@@ -95,8 +97,9 @@ header,
 	display: flex;
 	list-style: none;
 	padding: 0;
-	font-size: 2em;
-	line-height: 1.1em;
+	height: 100%;
+	font-size: 2.1em;
+	line-height: 2.1rem;
 }
 
 .nav-menu a{
@@ -106,14 +109,20 @@ header,
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	height: 100%;
 	text-decoration: none;
-	color: rgb(191, 191, 191);
-	padding: 0 3.87rem;
+	color: rgb(148, 148, 148);
+	padding: 0 1.8rem;
 }
 
-.nav-menu a:hover, .nav-menu .active{
+.nav-menu a:hover{
 	color: #fff;
-	background-color: rgb(47, 96, 151);
+	background-color: rgb(62, 96, 142);
+}
+
+.nav-menu .active{
+	background-color: rgb(62, 96, 142);
+	color: #fff;
 }
 
 .beta{
@@ -122,19 +131,17 @@ header,
 
 .beta span{
 	position: absolute;
-	bottom: 0.4rem;
-	right: 3.8rem;
-	font-size: 0.4em;
-	letter-spacing: 1px;
+	bottom: -0.4rem;
+	right: 1.7rem;
+	font-size: 0.9rem;
 	color: rgb(193, 121, 22);
 	text-transform: uppercase;
 }
 
 .hamburger{
-	width: 3.62rem;
-	height: 2.25rem;
+	width: 3.5rem;
+	height: 2.1rem;
 	position: relative;
-	margin-right: 3rem;
 	border-top: 2px solid rgb(148, 148, 148);
 	border-bottom: 2px solid rgb(148, 148, 148);
 }
@@ -142,7 +149,7 @@ header,
 .hamburger::after{
 	content: '';
 	position: absolute;
-	top: 50%;
+	top: 48.5%;
 	left: 0;
 	right: 0;
 	display: block;
@@ -160,15 +167,16 @@ header,
 	-webkit-box-align: end;
 	    -ms-flex-align: end;
 	        align-items: flex-end;
-	height: 8.12rem;
+	width: 100%;
+	min-height: 5.5rem;
 	color: #fff;
 }
 
 .copy-section a {
 	color: #fff;
 	text-decoration: none;
-	margin: 0 0 1.2rem 3rem;
-	font-size: 2em;
+	margin: 0 0 0.5rem 1.25rem;
+	font-size: 1.5em;
 	line-height: 1.1em;
 }
 
@@ -179,8 +187,8 @@ header,
 /*  TABS  */
 
 .tab-wrap{
-	height: 6.25rem;
-	background-color: rgb(47, 96, 151);
+	width: 100%;
+	background-color: rgba(42, 80, 126, 1);
 }
 
 .tab-wrap > input,
@@ -190,25 +198,13 @@ header,
 }
 
 .tab-wrap > input:checked + label{
-	background-color: rgb(232, 241, 250);
+	background-color: rgb(179, 211, 231);
 	color: #000;
 }
 
 .tab-wrap > input[id="tab-1"]:checked ~ .content .tab-1,
 .tab-wrap > input[id="tab-2"]:checked ~ .content .tab-2{
 	display: block;
-}
-
-.tab-label{
-	height: 100%;
-	cursor: pointer;
-	display: inline-block;
-	padding: 0 2.62rem;
-	background-color: rgb(47, 96, 151);
-	font-size: 1.25em;
-	line-height: 5em;
-	margin: 0 -0.27rem 0 0;
-	color: rgb(252, 252, 252);
 }
 
 .drop-favorite label{
@@ -219,12 +215,22 @@ header,
 .drop-favorite > input[id="tab-favorite"]:checked ~ .content-favorite{
 	background-color: green;
 	position: absolute;
-	right: 3.3rem;
-	top: 3.1rem;
+	right: 65px;
+	top: 35px;
 	display: block;
-	height: 10rem;
-	width: 8rem;
+	height: auto;
+	width: auto;
 	z-index: 5;
+}
+
+.tab-label{
+	cursor: pointer;
+	display: inline-block;
+	padding: 1.2rem 1.5rem;
+	background-color: rgba(42, 80, 126, 1);
+	font-size: 1.5em;
+	line-height: 1.05em;
+	margin: 0 -0.21rem 0 0;
 }
 
 .content{
@@ -235,21 +241,15 @@ header,
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
+	margin: 0 auto;
 	background-color: #fff;
 	display: none;
 	color: #000;
-	height: auto;
 }
 
 /*  TAB-2 CONTENT inside  */
 /* FIRST FORM  -- search-area-field-wrap -- */
-
-.tab-2 .list-wrap{
-	width: 100%;
-	height: 75vh;
-	background-color: rgb(252, 252, 252);
-}
-
 .tab-2 .list-wrap .search-area-field-wrap{
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -260,27 +260,27 @@ header,
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	height: 4.62rem;
-	background-color: #fff;
-	border-bottom: 2px solid rgb(217, 217, 217);
+	padding: 3px 10px;
 }
 
 .btn-search{
 	display: inline-block;
-	margin: 0 0 0 1.25rem;
+	margin: 0;
+	padding: 3px 5px;
 	cursor: pointer;
 	border: none;
 	outline: none;
-	background-color: inherit;
+	background-color: #fff;
 }
 
 .form-search span,
-.drop-favorite span,
-.search-area-field-wrap .question{
+.drop-favorite span:first-child,
+.drop-favorite span:last-child,
+.list-wrap .question{
 	font-size: 1.5em;
 	line-height: 1.1em;
 	vertical-align: middle;
-	color: rgb(127, 127, 127);
+	color: #000;
 }
 
 .form-search{
@@ -292,42 +292,40 @@ header,
 	        flex: 2;
 }
 
-.form-search .input-search{
+.search{
+	display: inline-block;
 	width: 100%;
-	padding: 0 0.5rem;
-	margin: 0 0.6rem;
+	padding: 0 10px;
+	margin-right: 10px;
 	border: none;
 	outline: none;
-	font-size: 1.25em;
 }
 
-.drop-favorite label{
-	position: relative;
-}
-
-.drop-favorite label::after{
-	content: '';
-	border-style: solid;
-	border-width: 5.5px 5.5px 0 5.5px;
-	border-color: rgb(127, 127, 127) transparent transparent transparent;
-	position: absolute;
-	top: 55%;
-	left: 1.45rem;
+.drop-favorite .caret{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: -5px;
+	margin-bottom: -10px;
+	border-top: 6px dashed;
+	border-top: 6px solid\9;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
 }
 
 .question{
-	margin: 0 1.1rem 0 1.3rem;
+	margin: 0 15px;
 }
 
 /*  SECOND FORM  -- setting-form-wrap -- */
 
-.setting-form-wrap,
-.setting-form{
-	width: 100%;
+.setting-form-wrap{
+	background-color: rgb(219, 219, 219);
 }
 
 .setting-form{
-	height: 100%;
+	padding: 1rem;
+	height: 75vh;
 }
 
 .setting-form select,
@@ -344,29 +342,24 @@ header,
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin: 1.45rem 0 2.75rem 0;
 }
 
 .setting-form .action-area-wrap p{
-	flex-grow: 1;
+	width: 100%;
 	text-align: center;
-	font-size: 1.1em;
-	line-height: 1.05em;
-	color: rgb(33, 33, 33);
 }
 
 .setting-form .action-area-wrap .action-select-wrap select{
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	width: 9.8rem;
+	width: 9.5rem;
 	height: 2.5rem;
-	border-radius: 7px;
-	margin-right: 0.87rem;
-	padding: 0 0 0 1.3rem;
-	background-color: rgb(45, 89, 138);
+	border-radius: 6px;
+	margin: 0;
+	padding: 0 0 0 1rem;
+	background-color: rgb(35, 69, 111);
 	color: #fff;
-	font-size: 1.125em;
-	outline: none;
+	font-size: 1.3em;
 }
 
 .setting-form .action-area-wrap .action-select-wrap {
@@ -376,23 +369,24 @@ header,
 .setting-form .action-area-wrap .action-select-wrap::after{
 	content: '';
 	border-style: solid;
-	border-width: 7px 7px 0 7px;
+	border-width: 6px 6px 0 6px;
 	border-color: #fff transparent transparent transparent;
 	position: absolute;
-	top: 45%;
-	right: 2.2rem;
+	top: 50%;
+	right: 20px;
 }
 
 .setting-form .action-area-wrap .action-select-wrap select option{
 	background-color: #fff;
 	color: #000;
+	font-size: 0.8rem;
 }
 
-.setting-form .form-fields-wrap{
+.form-wrap{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin: 0 7.5rem;
+	margin: 1rem 5rem 0 5rem;
 }
 
 .form-label-wrap{
@@ -406,17 +400,12 @@ header,
 	-webkit-box-align: end;
 	    -ms-flex-align: end;
 	        align-items: flex-end;
-	margin-right: 0.68rem;
 }
 
 .form-label-wrap > label{
-	margin: 1rem 0;
-	font-size: 1.06em;
-	line-height: 1.1em;
-}
-
-.setting-form label{
-	color: rgb(52, 84,106);
+	margin-right: 0.2rem;
+	margin-bottom: 1.3rem;
+	padding: 0.2rem;
 }
 
 .form-item-wrap{
@@ -430,10 +419,6 @@ header,
 	width: 70%;
 }
 
-.form-item-wrap > input{
-	height: 2.9rem;
-}
-
 .form-item-wrap > input,
 .form-item-wrap textarea{
 	margin-bottom: 1rem;
@@ -442,27 +427,27 @@ header,
 
 .form-item-wrap textarea{
 	max-width: 100%;
-	min-width: 100%;
-	min-height: 5.3rem;
-	border: solid 2px rgb(191, 191, 191);
+	min-height: 3.5rem;
 }
 
 .form-select-wrap{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin: 0 9.65rem;
+	width: 70%;
+	margin: 0 5rem 1rem;
+	padding-left: 1.8rem;
 }
 
 .form-select-wrap > label{
-	margin-right: 0.68rem;
+	padding: 0.2rem;
+	margin-right: 0.2rem;
 }
 
 .form-select-wrap select{
-	width: 14.75rem;
-	height: 4.375rem;
+	width: 12%;
+	height: 2.5rem;
 	padding: 0.1rem 0.3rem;
-	border: solid 4px rgb(191, 191, 191);
 }
 
 .form-button-wrap{
@@ -472,13 +457,12 @@ header,
 	-webkit-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
-	margin-top: 1.375rem;
 }
 
 .form-button-wrap input{
 	padding: 0.4rem 1.2rem;
-	margin-right: 1.25rem;
-	border-radius: 7px;
+	margin-left: 0.8rem;
+	border-radius: 6px;
 	background-color: rgb(13, 152, 35);
 	border: none;
 	outline: none;

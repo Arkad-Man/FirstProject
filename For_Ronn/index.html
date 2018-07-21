@@ -3,9 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Совместимость с IE-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Для адаптивности медиа запросов-->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -16,11 +15,14 @@
     <![endif]-->
 </head>
 <body>
-
 	<header>
 		<div class="header-wrap">
+
 			<div class="logo">
-				<a href="#">Logo!</a>
+				<a href="#">
+					<p>CloudPassage</p>
+					<p>halo</p>
+				</a>
 			</div>
 
 			<div class="nav-wrap">
@@ -65,13 +67,14 @@
 									<button class="btn-search" type="submit" name="search-button">
 										<span><i class="fa fa-search"></i></span>
 									</button>
-									<input class="input-search" type="text" placeholder="Add Filter">
+									<input class="search" type="text" placeholder="Add Filter">
 								</form>
 
 								<div class="drop-favorite">
 									<input type="checkbox" name="tab" id="tab-favorite">
 									<label for="tab-favorite">
 										<span><i class="fa fa-star"></i></span>
+										<span class="caret"></span>
 									</label>
 									<div class="content-favorite">
 										<ul>
@@ -83,7 +86,6 @@
 										</ul>
 									</div>
 								</div>
-
 								<a href="#" class="question"><span><i class="fa fa-question-circle"></i></span></a>
 							</div>
 
@@ -102,13 +104,13 @@
 									 	</div>
 									</div>
 
-									<div class="form-fields-wrap">
+									<div class="form-wrap">
 										<div class="form-label-wrap">
 											<label for="input-form">Report Name:</label>
 											<label for="textarea-form">Description:</label>
 										</div>
 										<div class="form-item-wrap">
-											<input id="input-form" type="text" name="" required>
+											<input id="input-form" type="text" name="" value="" required>
 											<textarea id="textarea-form" name="name"></textarea>
 										</div>
 									</div>
